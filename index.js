@@ -9,9 +9,9 @@ const io = new Server(server);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public-flutter')));
+app.use(express.static(path.join(__dirname, './public-flutter')));
 app.get('*', (_, res) => {
-  res.sendFile(path.resolve(__dirname, 'public-flutter/index.html'));
+  res.sendFile(path.resolve(__dirname, './public-flutter/index.html'));
 });
 
 
